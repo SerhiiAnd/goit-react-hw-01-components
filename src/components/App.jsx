@@ -23,8 +23,8 @@ import user from './DataJson/user.json';
 import { Profile } from './Profile/Profile';
 import data from './DataJson/data.json';
 import { Statistics } from './Statistics/Statistics';
-// import friends from './FriendList/friends.json';
-// import { FriendList } from './FriendList/FriendList';
+import friends from './DataJson/friends.json';
+import { FriendList } from './FriendList/FriendList';
 // import transactions from './TransactionsHistory/transactions.json';
 // import { TransactionsHistory } from './TransactionsHistory/TransactionsHistory';
 
@@ -39,8 +39,8 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
-      {/* <FriendList friends={friends} />
-      <TransactionsHistory transactions={transactions} /> */}
+      <FriendList friends={friends} />
+      {/* <TransactionsHistory transactions={transactions} /> */}
     </div>
   );
 };

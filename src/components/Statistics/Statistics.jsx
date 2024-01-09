@@ -2,27 +2,22 @@ import css from './Statistics.module.css';
 
 const Statistics = ({ stats, title = '' }) => {
   return (
-    stats?.length > 0 && (
-      <section className={css.section}>
-        {title?.length > 0 && <h2 className={css.title}>{title}</h2>}
+    <section className={css.sectionStati}>
+      {title?.length > 0 && <h2 className={css.title}>{title}</h2>}
 
-        <ul
-          className={css.statList}
-          style={{ '--statistic-item-count': Math.min(stats.length, 4) }}
-        >
-          {stats.map(({ id, label, percentage }) => (
-            <li
-              className={css.item}
-              key={id}
-              style={{ backgroundColor: randomColor() }}
-            >
-              <span className={css.label}>{label}</span>
-              <span className={css.percentage}>{percentage}%</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )
+      <ul className={css.listStati} style={{ '': Math.min(stats.length, 4) }}>
+        {stats.map(({ id, label, percentage }) => (
+          <li
+            className={css.item}
+            key={id}
+            style={{ backgroundColor: randomColor() }}
+          >
+            <span className={css.label}>{label}</span>
+            <span className={css.percentage}>{percentage}%</span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };
 

@@ -24,13 +24,17 @@
 
 .transaction th,
 td {
-  padding: 12px 6px;
+  padding: 15px 5px;
 }
 
 .transaction tbody tr {
   background-color: white;
   color: #828282;
   text-align: center;
+}
+.transaction thead th,
+.transaction tbody td {
+  width: calc(100% / 3);
 }
 
 .transaction td:first-child {
@@ -41,9 +45,4 @@ td {
 .transaction tbody td:first-child {
   padding-left: 75px;
   text-align: left;
-}
-
-.transaction thead th,
-.transaction tbody td {
-  width: calc(100% / 3);
 }
